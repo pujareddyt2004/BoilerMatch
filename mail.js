@@ -1,4 +1,5 @@
-import firebase from "@firebase/app-compat";
+import { getDatabase, ref, onValue } from "firebase/database";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBU2u8GHqlmDnBLTN2uhXw95qsQpz6KiKA",
@@ -21,7 +22,7 @@ const firebaseConfig = {
   let submitButton = document.getElementById('submit')
 
   // event list
-  submitButton.addEventListener("click", (e) => {
+  submitButton.addEventListener("click", async (e) => {
     e.preventDefault()
 
     let name = document.getElementById('name').value
@@ -30,15 +31,16 @@ const firebaseConfig = {
   })
 
   //save form data to firebase
-  db.doc().set({
+  await db.doc().set({
     name: name,
     puid: puid,
     number: number,
-  }).then( () => {
+}).then( () => {
     console.log("Data saved")
-  }).catch((error) => {
+}).catch((error) => {
     console.log(error)
-  })
+})
+
 
   /*
   // initialize firebase
@@ -71,6 +73,10 @@ const firebaseConfig = {
         number : number,
     });
   } */
+
+
+
+
 
   /*const saveForm = (name, puid, number) => {
     var newForm = formDB.push();
