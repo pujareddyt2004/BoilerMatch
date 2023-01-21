@@ -27,9 +27,6 @@
 </head>
 
 <body>
-    <div>
-        <button>GET RESULTS</button>
-    </div>
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
         <div class="wrapper wrapper--w680">
             <div class="card card-4">
@@ -516,39 +513,39 @@
             let name = document.getElementById('name').value;
             let puid = document.getElementById('puid').value;
             let number = document.getElementById('number').value;
-            let year = document.getElementById('year').value.substr(0, 1);
+            let year = document.getElementById('year').value?.substr(0, 1);
             let major = document.getElementById('major').value;
-            let sports = document.getElementById('sports').value.substr(0, 1);
-            let morning_or_night = document.getElementById('morning-or-night').value.substr(0, 1);
-            let clean = document.getElementById('clean').value.substr(0, 1);
-            let pet = document.getElementById('pet').value.substr(0, 1);
-            let free_time = document.getElementById('free-time').value.substr(0, 1);
-            let corec = document.getElementById('corec').value.substr(0, 1);
-            let nature = document.getElementById('nature').value.substr(0, 1);
-            let shout_or_whisper = document.getElementById('shout-or-whisper').value.substr(0, 1);
-            let sociable = document.getElementById('sociable').value.substr(0, 1);
-            let famous = document.getElementById('famous').value.substr(0, 1);
-            let music = document.getElementById('music').value.substr(0, 1);
-            let spotify_or_apple = document.getElementById('spotify-or-apple').value.substr(0, 1);
-            let work_ethic = document.getElementById('work-ethic').value.substr(0, 1);
-            let money_happiness = document.getElementById('money-happiness').value.substr(0, 1);
-            let rich = document.getElementById('rich').value.substr(0, 1);
-            let first_date_money = document.getElementById('first-date-money').value.substr(0, 1);
-            let pda = document.getElementById('pda').value.substr(0, 1);
-            let dining_court = document.getElementById('dining-court').value.substr(0, 1);
-            let bestfriend = document.getElementById('bestfriend').value.substr(0, 1);
-            let supernatural = document.getElementById('supernatural').value.substr(0, 1);
-            let time_machine = document.getElementById('time-machine').value.substr(0, 1);
-            let drink = document.getElementById('drink').value.substr(0, 1);
-            let aliens = document.getElementById('aliens').value.substr(0, 1);
-            let astrology = document.getElementById('astrology').value.substr(0, 1);
-            let birds = document.getElementById('birds').value.substr(0, 1);
-            let season = document.getElementById('season').value.substr(0, 1);
-            let bell_tower = document.getElementById('bell-tower').value.substr(0, 1);
-            let humans_extinct = document.getElementById('humans-extinct').value.substr(0, 1);
-            let cry = document.getElementById('cry').value.substr(0, 1);
-            let tattoo = document.getElementById('tattoo').value.substr(0, 1);
-            let interested_gender = document.getElementById('interested-gender').value.substr(0, 1);
+            let sports = document.getElementById('sports').value?.substr(0, 1);
+            let morning_or_night = document.getElementById('morning-or-night').value?.substr(0, 1);
+            let clean = document.getElementById('clean').value?.substr(0, 1);
+            let pet = document.getElementById('pet').value?.substr(0, 1);
+            let free_time = document.getElementById('free-time').value?.substr(0, 1);
+            let corec = document.getElementById('corec').value?.substr(0, 1);
+            let nature = document.getElementById('nature').value?.substr(0, 1);
+            let shout_or_whisper = document.getElementById('shout-or-whisper').value?.substr(0, 1);
+            let sociable = document.getElementById('sociable').value?.substr(0, 1);
+            let famous = document.getElementById('famous').value?.substr(0, 1);
+            let music = document.getElementById('music').value?.substr(0, 1);
+            let spotify_or_apple = document.getElementById('spotify-or-apple').value?.substr(0, 1);
+            let work_ethic = document.getElementById('work-ethic').value?.substr(0, 1);
+            let money_happiness = document.getElementById('money-happiness').value?.substr(0, 1);
+            let rich = document.getElementById('rich').value?.substr(0, 1);
+            let first_date_money = document.getElementById('first-date-money').value?.substr(0, 1);
+            let pda = document.getElementById('pda').value?.substr(0, 1);
+            let dining_court = document.getElementById('dining-court').value?.substr(0, 1);
+            let bestfriend = document.getElementById('bestfriend').value?.substr(0, 1);
+            let supernatural = document.getElementById('supernatural').value?.substr(0, 1);
+            let time_machine = document.getElementById('time-machine').value?.substr(0, 1);
+            let drink = document.getElementById('drink').value?.substr(0, 1);
+            let aliens = document.getElementById('aliens').value?.substr(0, 1);
+            let astrology = document.getElementById('astrology').value?.substr(0, 1);
+            let birds = document.getElementById('birds').value?.substr(0, 1);
+            let season = document.getElementById('season').value?.substr(0, 1);
+            let bell_tower = document.getElementById('bell-tower').value?.substr(0, 1);
+            let humans_extinct = document.getElementById('humans-extinct').value?.substr(0, 1);
+            let cry = document.getElementById('cry').value?.substr(0, 1);
+            let tattoo = document.getElementById('tattoo').value?.substr(0, 1);
+            let interested_gender = document.getElementById('interested-gender').value?.substr(0, 1);
             // save form data to firebase
             await db.doc(puid).set({
                 name: name,
