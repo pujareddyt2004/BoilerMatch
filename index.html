@@ -27,6 +27,9 @@
 </head>
 
 <body>
+    <div>
+        <button>GET RESULTS</button>
+    </div>
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
         <div class="wrapper wrapper--w680">
             <div class="card card-4">
@@ -506,7 +509,6 @@
         const form = document.getElementById("matchForm");
         form.addEventListener('submit', async(e) => {
             e && e.preventDefault();
-
             //get submit form data
             let submitButton = document.getElementById("submitt");
 
@@ -514,18 +516,14 @@
             let name = document.getElementById('name').value;
             let puid = document.getElementById('puid').value;
             let number = document.getElementById('number').value;
-            alert(name);
+
             // save form data to firebase
-            await db.doc("3").set({
+            await db.doc(puid).set({
                 name: name,
                 puid: puid,
                 number: number,
             });
         })
-
-        const func = async(e) => {
-            e.preventDefault();
-        }
     </script>
 
 </body>
