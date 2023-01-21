@@ -549,7 +549,6 @@
             let cry = document.getElementById('cry').value.substr(0, 1);
             let tattoo = document.getElementById('tattoo').value.substr(0, 1);
             let interested_gender = document.getElementById('interested-gender').value.substr(0, 1);
-
             // save form data to firebase
             await db.doc(puid).set({
                 name: name,
