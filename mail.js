@@ -1,4 +1,4 @@
-import firebase from "@firebase/app-compat";
+import firebase from "firebase/compat/app";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBU2u8GHqlmDnBLTN2uhXw95qsQpz6KiKA",
@@ -27,17 +27,16 @@ const firebaseConfig = {
     let name = document.getElementById('name').value
     let puid = document.getElementById('puid').value
     let number = document.getElementById('number').value
-  })
 
-  //save form data to firebase
-  db.doc().set({
-    name: name,
-    puid: puid,
-    number: number,
-  }).then( () => {
-    console.log("Data saved")
-  }).catch((error) => {
-    console.log(error)
+    db.doc().set({
+      name: name,
+      puid: puid,
+      number: number,
+    }).then( () => {
+      console.log("Data saved")
+    }).catch((error) => {
+      console.log(error)
+    })
   })
 
   /*
@@ -70,7 +69,7 @@ const firebaseConfig = {
         puid : puid,
         number : number,
     });
-  } */
+  }*/
 
   /*const saveForm = (name, puid, number) => {
     var newForm = formDB.push();
