@@ -1,3 +1,5 @@
+import firebase from "@firebase/app-compat";
+
 const firebaseConfig = {
     apiKey: "AIzaSyBU2u8GHqlmDnBLTN2uhXw95qsQpz6KiKA",
     authDomain: "boilermatch-33826.firebaseapp.com",
@@ -8,6 +10,37 @@ const firebaseConfig = {
     appId: "1:469018307651:web:925533b16b97307aeb78f6"
   };
 
+  // initialize firebase
+  initializeApp(firebaseConfig);
+  var firestore = firebase.firestore()
+
+  //variable to acccess database collection
+  const db = firestore.collection("formData")
+
+  //get submit form data
+  let submitButton = document.getElementById('submit')
+
+  // event list
+  submitButton.addEventListener("click", (e) => {
+    e.preventDefault()
+
+    let name = document.getElementById('name').value
+    let puid = document.getElementById('puid').value
+    let number = document.getElementById('number').value
+  })
+
+  //save form data to firebase
+  db.doc().set({
+    name: name,
+    puid: puid,
+    number: number,
+  }).then( () => {
+    console.log("Data saved")
+  }).catch((error) => {
+    console.log(error)
+  })
+
+  /*
   // initialize firebase
   firebase.initializeApp(firebaseConfig);
 
@@ -37,7 +70,7 @@ const firebaseConfig = {
         puid : puid,
         number : number,
     });
-  }
+  } */
 
   /*const saveForm = (name, puid, number) => {
     var newForm = formDB.push();
