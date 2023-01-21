@@ -18,14 +18,28 @@ const firebaseConfig = {
   function submitForm(e) {
     e.preventDefault();
 
-    var name = getElementVal('name');
-    var puid = getElementVal('puid');
-    var number = getElementVal('number');
+    var name = getInputVal('name');
+    var puid = getInputVal('puid');
+    var number = getInputVal('number');
 
     saveForm(name, puid, number);
+    document.getElementById('matchForm')
   }
 
-  const saveForm = (name, puid, number) => {
+  function getInputVal(id) {
+    return document.getElementById(id).value;
+  }
+
+  function saveForm(name, puid, email) {
+    var newFormRef = formDB.push();
+    newFormRef.set({
+        name: name,
+        puid : puid,
+        number : number,
+    });
+  }
+
+  /*const saveForm = (name, puid, number) => {
     var newForm = formDB.push();
     
     newForm.set({
@@ -37,4 +51,4 @@ const firebaseConfig = {
 
   const getElementVal = (id) => {
     return document.getElementById(id).value;
-  };
+  };*/
