@@ -32,7 +32,7 @@
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">❤️ Boiler⬆️ Match⬆️ ❤️</h2>
-                    <form method="POST">
+                    <form id="matchForm">
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
@@ -463,7 +463,7 @@
                             </div>
                         </div>
                         <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" type="submit" id="submit">Match Up!</button>
+                            <button class="btn btn--radius-2 btn--blue" type="submit" id="submitt">Match Up!</button>
                         </div>
                     </form>
                 </div>
@@ -480,9 +480,53 @@
 
     <!-- Main JS-->
     <script src="js/global.js"></script>
+    <script src="mail.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-    <script src="mail.js" ></script>
+    <script src="js/global.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBU2u8GHqlmDnBLTN2uhXw95qsQpz6KiKA",
+            authDomain: "boilermatch-33826.firebaseapp.com",
+            databaseURL: "https://boilermatch-33826-default-rtdb.firebaseio.com",
+            projectId: "boilermatch-33826",
+            storageBucket: "boilermatch-33826.appspot.com",
+            messagingSenderId: "469018307651",
+            appId: "1:469018307651:web:925533b16b97307aeb78f6"
+        };
+
+        // initialize firebase
+        firebase.initializeApp(firebaseConfig);
+        const firestore = firebase.firestore();
+
+        //variable to acccess database collection
+        const db = firestore.collection("formData");
+
+        const form = document.getElementById("matchForm");
+        form.addEventListener('submit', async(e) => {
+            e && e.preventDefault();
+
+            //get submit form data
+            let submitButton = document.getElementById("submitt");
+
+            // event list
+            let name = document.getElementById('name').value;
+            let puid = document.getElementById('puid').value;
+            let number = document.getElementById('number').value;
+            alert(name);
+            // save form data to firebase
+            await db.doc("3").set({
+                name: name,
+                puid: puid,
+                number: number,
+            });
+        })
+
+        const func = async(e) => {
+            e.preventDefault();
+        }
+    </script>
+
 </body>
 </html>
