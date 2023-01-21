@@ -35,7 +35,7 @@
                     <form method="POST">
                         <div class="row row-space">
                             <div class="col-2">
-                                <div class="input-group">
+                                <div class="input-group" id="name">
                                     <label class="label">Full Name</label>
                                     <input class="input--style-4" type="text" name="first_name">
                                 </div>
@@ -43,7 +43,7 @@
                         </div>
                         <div class="row row-space">
                             <div class="col-2">
-                                <div class="input-group">
+                                <div class="input-group" id="puid">
                                     <label class="label">PUID (Used to get your results)</label>
                                     <input class="input--style-4" type="text" name="first_name">
                                 </div>
@@ -51,13 +51,13 @@
                         </div>
                         <div class="row row-space">
                             <div class="col-2">
-                                <div class="input-group">
+                                <div class="input-group" id="number">
                                     <label class="label">Phone Number</label>
                                     <input class="input--style-4" type="text" name="first_name">
                                 </div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="year">
                             <label class="label">What Year</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -72,13 +72,13 @@
                         </div>
                         <div class="row row-space">
                             <div class="col-2">
-                                <div class="input-group">
+                                <div class="input-group" id="major">
                                     <label class="label">Major</label>
                                     <input class="input--style-4" type="text" name="first_name">
                                 </div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="gender">
                             <label class="label">Gender</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -90,7 +90,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="interested-gender">
                             <label class="label">What Gender(s) are you Interested In? (Pick One Option)</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -106,7 +106,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="sports">
                             <label class="label">Do You Like Playing Sports</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -120,21 +120,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
-                            <label class="label">Do You Like Playing Sports</label>
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
-                                    <option disabled="disabled" selected="selected">Choose Option</option>
-                                    <option>Nope</option>
-                                    <option>Rarely</option>
-                                    <option>If I think it's fun</option>
-                                    <option>Mostly</option>
-                                    <option>Hell Yeah</option>
-                                </select>
-                                <div class="select-dropdown"></div>
-                            </div>
-                        </div>
-                        <div class="input-group">
+                        <div class="input-group" id="morning-or-night">
                             <label class="label">Are You...</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -145,7 +131,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="clean">
                             <label class="label">How Clean Are You</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -159,7 +145,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="pet">
                             <label class="label">Pick a Pet</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -171,7 +157,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="free-time">
                             <label class="label">How you would rather be spending your free-time</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -182,7 +168,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="corec">
                             <label class="label">How often do you workout or go to the CoRec?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -196,7 +182,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="nature">
                             <label class="label">Do you like spending time sitting outside in nature?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -208,7 +194,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="shout-or-whisper">
                             <label class="label">Would you rather only be able to...</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -219,7 +205,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="sociable">
                             <label class="label">How sociable would you say you are?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -232,7 +218,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="famous">
                             <label class="label">Would you rather be...</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -243,7 +229,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="music">
                             <label class="label">How much time do you spend listening to music?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -256,7 +242,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="spotify-or-apple">
                             <label class="label">Spotify or Apple Music?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -267,7 +253,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="work-ethic">
                             <label class="label">Work Ethic?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -278,7 +264,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="money-happiness">
                             <label class="label">Do you believe money can buy happiness?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -289,7 +275,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="rich">
                             <label class="label">Would you rather...</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -300,7 +286,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="first-date-money">
                             <label class="label">How would you split the check on the first-date?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -311,7 +297,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="pda">
                             <label class="label">Thoughts on PDA?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -324,7 +310,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="dining-court">
                             <label class="label">Favorite Dining Court?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -338,7 +324,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="bestfriend">
                             <label class="label">Would you be ok with your partner having a bestfriend of the opposite gender?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -350,7 +336,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="supernatural">
                             <label class="label">Do you believe in the supernatural? (Ghosts, Demons, etc)</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -361,7 +347,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="time-machine">
                             <label class="label">You have a time-machine but it can only go...</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -372,7 +358,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="drink">
                             <label class="label">How much do you drink?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -386,7 +372,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="aliens">
                             <label class="label">Do aliens exist?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -397,7 +383,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="astrology">
                             <label class="label">Do you believe in Astrology?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -408,7 +394,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="birds">
                             <label class="label">Are birds real?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -419,7 +405,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="season">
                             <label class="label">Favorite Season?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -432,7 +418,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="bell-tower">
                             <label class="label">Have you walked under the Purdue Bell Tower?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -443,7 +429,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="humans-extinct">
                             <label class="label">Do you think humanity will ever go extinct?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -454,7 +440,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="cry">
                             <label class="label">Have you ever cried watching a movie or reading a book?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -465,7 +451,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="tattoo">
                             <label class="label">Would you ever get a tattoo?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
