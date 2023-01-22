@@ -18,7 +18,12 @@ def findMatch():
 @app.route('/findMatch.html', methods=['POST'])
 def formPost():
     puid = request.form['text'].upper()
-    return calculateMatch(puid)
+    output = ""
+    for element in calculateMatch(puid):
+        output += "<div><h1>"
+        output += element[0] + " " + element[1] + " " + element[2] + " " + element[3] + "</h1></div>"
+
+    return output; 
 
 if __name__ == "__main__":
     app.run(debug=True)

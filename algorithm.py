@@ -108,6 +108,8 @@ def calculateMatch(PUID):
 
                 percentage = str(percentage)
 
+                percentage = percentage + "%"
+
 
             person_scores.append([currentName, currentId, percentage])
 
