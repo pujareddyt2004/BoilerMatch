@@ -28,12 +28,45 @@
     <!-- PyScript Stuff-->
     <!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" /> -->
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline;
+        }
+    </style>
+
 </head>
 
 <body>
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <ul>
+            <li style="color:white"><a href="index.html">Home</a></li>
+            <li style="color:white"><a href="findMatch.html">Find Match</a></li>
+        </ul>
+
         <div class="wrapper wrapper--w680">
             <form id="resultForm">
+                <div class="row row-space">
+                    <div class="col-2">
+                        <div class="input-group">
+                            <ul>
+                                <li><label class="label" id="result_puid"><b>Home</b></label></li>
+                                <li><label class="label" id="result_puid"><b>Home</b></label></li>
+                            </ul>
+                            <label class="label" id="result_puid"><b>Home</b></label>
+                        </div>
+                    </div>
+                    <button class="btn btn--radius-2 btn--blue" type="submit" id="results">GET RESULTS</button>
+                </div>
+            </form>
+        
+            <!--<form id="resultForm">
                 <div class="row row-space">
                     <div class="col-2">
                         <div class="input-group">
@@ -43,7 +76,8 @@
                     </div>
                     <button class="btn btn--radius-2 btn--blue" type="submit" id="results">GET RESULTS</button>
                 </div>
-            </form>
+            </form>-->
+
             <div><br><br></div>
             <div>
                 <py-script>

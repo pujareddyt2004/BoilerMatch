@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>💋BoilerMatch💏</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+
+    <!-- PyScript Stuff-->
+    <!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" /> -->
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <ul>
+            <li style="color:white"><a href="index.html">Home</a></li>
+            <li style="color:white"><a href="findMatch.html">Find Match</a></li>
+        </ul>
+
+        <div class="wrapper wrapper--w680">
+            <form id="resultForm">
+                <div class="row row-space">
+                    <div class="col-2">
+                        <div class="input-group">
+                            <ul>
+                                <li><label class="label" id="result_puid"><b>Home</b></label></li>
+                                <li><label class="label" id="result_puid"><b>Home</b></label></li>
+                            </ul>
+                            <label class="label" id="result_puid"><b>Home</b></label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        
+            <form id="resultForm">
+                <div class="row row-space">
+                    <div class="col-2">
+                        <div class="input-group">
+                            <label class="label" id="result_puid"><b>ENTER PUID</b></label>
+                            <input class="input--style-4" type="text" name="name" id="puidResult">
+                        </div>
+                    </div>
+                    <button class="btn btn--radius-2 btn--blue" type="submit" id="results">GET RESULTS</button>
+                </div>
+            </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+    <script src="mail.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="js/global.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBU2u8GHqlmDnBLTN2uhXw95qsQpz6KiKA",
+            authDomain: "boilermatch-33826.firebaseapp.com",
+            databaseURL: "https://boilermatch-33826-default-rtdb.firebaseio.com",
+            projectId: "boilermatch-33826",
+            storageBucket: "boilermatch-33826.appspot.com",
+            messagingSenderId: "469018307651",
+            appId: "1:469018307651:web:925533b16b97307aeb78f6"
+        };
+
+        // initialize firebase
+        firebase.initializeApp(firebaseConfig);
+        const firestore = firebase.firestore();
+
+        //variable to acccess database collection
+        const db = firestore.collection("formData");
+
+        const results = document.getElementById("resultForm");
+        let puid = null
+        results.addEventListener('submit', async(e) => {
+            e && e.preventDefault();
+            puid = document.getElementById('puidResult').value;
+        })
+
+        const form = document.getElementById("matchForm");
+        form.addEventListener('submit', async(e) => {
+            e && e.preventDefault();
+
+            // event list
+            let name = document.getElementById('name').value;
+            let puid = document.getElementById('puid').value;
+            let number = document.getElementById('number').value;
+            let year = document.getElementById('year').value?.substr(0, 1);
+            let major = document.getElementById('major').value;
+            let gender = document.getElementById('gender').value?.substr(0, 1);
+            let sports = document.getElementById('sports').value?.substr(0, 1);
+            let morning_or_night = document.getElementById('morning-or-night').value?.substr(0, 1);
+            let clean = document.getElementById('clean').value?.substr(0, 1);
+            let pet = document.getElementById('pet').value?.substr(0, 1);
+            let free_time = document.getElementById('free-time').value?.substr(0, 1);
+            let corec = document.getElementById('corec').value?.substr(0, 1);
+            let nature = document.getElementById('nature').value?.substr(0, 1);
+            let shout_or_whisper = document.getElementById('shout-or-whisper').value?.substr(0, 1);
+            let sociable = document.getElementById('sociable').value?.substr(0, 1);
+            let famous = document.getElementById('famous').value?.substr(0, 1);
+            let music = document.getElementById('music').value?.substr(0, 1);
+            let spotify_or_apple = document.getElementById('spotify-or-apple').value?.substr(0, 1);
+            let work_ethic = document.getElementById('work-ethic').value?.substr(0, 1);
+            let money_happiness = document.getElementById('money-happiness').value?.substr(0, 1);
+            let rich = document.getElementById('rich').value?.substr(0, 1);
+            let first_date_money = document.getElementById('first-date-money').value?.substr(0, 1);
+            let pda = document.getElementById('pda').value?.substr(0, 1);
+            let dining_court = document.getElementById('dining-court').value?.substr(0, 1);
+            let bestfriend = document.getElementById('bestfriend').value?.substr(0, 1);
+            let supernatural = document.getElementById('supernatural').value?.substr(0, 1);
+            let time_machine = document.getElementById('time-machine').value?.substr(0, 1);
+            let drink = document.getElementById('drink').value?.substr(0, 1);
+            let aliens = document.getElementById('aliens').value?.substr(0, 1);
+            let astrology = document.getElementById('astrology').value?.substr(0, 1);
+            let birds = document.getElementById('birds').value?.substr(0, 1);
+            let season = document.getElementById('season').value?.substr(0, 1);
+            let bell_tower = document.getElementById('bell-tower').value?.substr(0, 1);
+            let humans_extinct = document.getElementById('humans-extinct').value?.substr(0, 1);
+            let cry = document.getElementById('cry').value?.substr(0, 1);
+            let tattoo = document.getElementById('tattoo').value?.substr(0, 1);
+            let interested_gender = document.getElementById('interested-gender').value?.substr(0, 1);
+
+            if (!name || !puid || !number || !year || !major || !gender || !morning_or_night || !clean || !pet || !free_time ||
+            !corec || !nature || !shout_or_whisper || !sociable || !famous || !music || !shout_or_whisper || !work_ethic || !money_happiness || !rich ||
+            !first_date_money || !pda || !dining_court || !bestfriend || !supernatural || !time_machine || !drink || !aliens || !astrology || !birds || !bell_tower ||
+            !humans_extinct || !cry || !bell_tower || !tattoo || !interested_gender) {
+                alert("PLEASE FILL ALL OF THE FIELDS OUT");
+            } else {
+                // save form data to firebase
+                await db.doc(puid).set({
+                    name: name,
+                    puid: puid,
+                    number: number,
+                    year: year,
+                    major: major,
+                    gender: gender,
+                    sports: sports,
+                    morning_or_night: morning_or_night,
+                    clean: clean,
+                    pet: pet,
+                    free_time: free_time,
+                    corec: corec,
+                    nature: nature,
+                    shout_or_whisper: shout_or_whisper,
+                    sociable: sociable,
+                    famous: famous,
+                    music: music,
+                    spotify_or_apple: spotify_or_apple,
+                    work_ethic: work_ethic,
+                    money_happiness: money_happiness,
+                    rich: rich,
+                    first_date_money: first_date_money,
+                    pda: pda,
+                    dining_court: dining_court,
+                    bestfriend: bestfriend,
+                    supernatural: supernatural,
+                    time_machine: time_machine,
+                    drink: drink,
+                    aliens: aliens,
+                    astrology: astrology,
+                    birds: birds,
+                    season: season,
+                    bell_tower: bell_tower,
+                    humans_extinct: humans_extinct,
+                    cry: cry,
+                    tattoo: tattoo,
+                    interested_gender: interested_gender,
+                });
+                alert("Good Job!");
+            }
+        })
+    </script>
+
+</body>
+</html>
