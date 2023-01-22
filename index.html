@@ -35,9 +35,25 @@
             margin: 0;
             padding: 0;
         }
-
         li {
             display: inline;
+        }
+        a:link {
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 125%;
+            padding-left: 50px;
+        }
+        a:visited {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 125%;
+        }
+        a:hover {
+            color: white;
+            text-decoration: none;
+            font-size: 160%;
         }
     </style>
 
@@ -46,44 +62,17 @@
 <body>
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
         <ul>
-            <li style="color:white"><a href="index.html">Home</a></li>
-            <li style="color:white"><a href="findMatch.html">Find Match</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="findMatch.html">Find Match</a></li>
         </ul>
+        <br>
+        <br>
 
         <div class="wrapper wrapper--w680">
-            <form id="resultForm">
-                <div class="row row-space">
-                    <div class="col-2">
-                        <div class="input-group">
-                            <ul>
-                                <li><label class="label" id="result_puid"><b>Home</b></label></li>
-                                <li><label class="label" id="result_puid"><b>Home</b></label></li>
-                            </ul>
-                            <label class="label" id="result_puid"><b>Home</b></label>
-                        </div>
-                    </div>
-                    <button class="btn btn--radius-2 btn--blue" type="submit" id="results">GET RESULTS</button>
-                </div>
-            </form>
-        
-            <!--<form id="resultForm">
-                <div class="row row-space">
-                    <div class="col-2">
-                        <div class="input-group">
-                            <label class="label" id="result_puid"><b>ENTER PUID</b></label>
-                            <input class="input--style-4" type="text" name="name" id="puidResult">
-                        </div>
-                    </div>
-                    <button class="btn btn--radius-2 btn--blue" type="submit" id="results">GET RESULTS</button>
-                </div>
-            </form>-->
 
             <div><br><br></div>
-            <div>
-                <py-script>
-                    print(f"Hello")
-                </py-script>
-            </div>
+
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">❤️ Boiler⬆️ Match⬆️ ❤️</h2>
