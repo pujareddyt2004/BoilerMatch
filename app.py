@@ -18,15 +18,40 @@ def findMatch():
 @app.route('/findMatch.html', methods=['POST'])
 def formPost():
     puid = request.form['text'].upper()
-    #output = ""
-    output += "<body><div><h1>MATCHES</h1></div><br><br>"
+    output = """
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                text-align: center;
+                background-color: gray;
+            }
+            .top {
+                background-color: white;
+            }
+            .match {
+                background-color: #d5f4e6;
+            }
+            h1 {
+                color: blue;
+            }
+            h2 {
+                color: red;
+            }
+        </style>
+    </head>
+    """
+    output += "<body><div class='top'><h1>MATCHES</h1></div><br><br>"
     index = 1
 
     for element in calculateMatch(puid):
-        output += "<div><h1>" + str(index) + ". Name: "
-        output += element[0] + " | Compatibility: " + element[2] + " | Gender: " + element[3] + "</h1></div>"
+        output += "<div class='match'><h2>" + str(index) + ". Name: "
+        output += element[0] + " | Compatibility: " + element[2] + " | Gender: " + element[3] + "</h2></div>"
         index+=1
-    output += "</body>"
+    output += "</body></html>"
 
     return output; 
 
