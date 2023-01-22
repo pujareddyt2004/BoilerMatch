@@ -24,11 +24,32 @@
 
     <!-- Main CSS-->
     <link href="css/main.css" rel="stylesheet" media="all">
+
+    <!-- PyScript Stuff-->
+    <!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" /> -->
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 </head>
 
 <body>
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
         <div class="wrapper wrapper--w680">
+            <form id="resultForm">
+                <div class="row row-space">
+                    <div class="col-2">
+                        <div class="input-group">
+                            <label class="label" id="result_puid"><b>ENTER PUID</b></label>
+                            <input class="input--style-4" type="text" name="name" id="puidResult">
+                        </div>
+                    </div>
+                    <button class="btn btn--radius-2 btn--blue" type="submit" id="results">GET RESULTS</button>
+                </div>
+            </form>
+            <div><br><br></div>
+            <div>
+                <py-script>
+                    print(f"Hello")
+                </py-script>
+            </div>
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">❤️ Boiler⬆️ Match⬆️ ❤️</h2>
@@ -503,11 +524,16 @@
         //variable to acccess database collection
         const db = firestore.collection("formData");
 
+        const results = document.getElementById("resultForm");
+        let puid = null
+        results.addEventListener('submit', async(e) => {
+            e && e.preventDefault();
+            puid = document.getElementById('puidResult').value;
+        })
+
         const form = document.getElementById("matchForm");
         form.addEventListener('submit', async(e) => {
             e && e.preventDefault();
-            //get submit form data
-            let submitButton = document.getElementById("submitt");
 
             // event list
             let name = document.getElementById('name').value;
