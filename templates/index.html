@@ -519,10 +519,11 @@
     <script src="vendor/datepicker/daterangepicker.js"></script>
 
     <!-- Main JS-->
+    <script src="js/global.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-    <script src="js/global.js"></script>
+
     <script>
         const firebaseConfig = {
             apiKey: "AIzaSyBU2u8GHqlmDnBLTN2uhXw95qsQpz6KiKA",
@@ -540,13 +541,6 @@
 
         //variable to acccess database collection
         const db = firestore.collection("formData");
-
-        const results = document.getElementById("resultForm");
-        let puid = null
-        results.addEventListener('submit', async(e) => {
-            e && e.preventDefault();
-            puid = document.getElementById('puidResult').value;
-        })
 
         const form = document.getElementById("matchForm");
         form.addEventListener('submit', async(e) => {

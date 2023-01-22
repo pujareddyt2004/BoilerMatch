@@ -12,8 +12,6 @@ db = firebase_admin.firestore.client()
 
 
 def calculateMatch(PUID):
-
-
     users = list(db.collection(u'formData').stream())
 
     docs = db.collection(u'formData').stream()
@@ -21,12 +19,8 @@ def calculateMatch(PUID):
     frames = []
 
     for doc in docs:
-
         userResponses = doc.to_dict()
-
         frames.append(pd.DataFrame(userResponses, index=[0,]))
-
-
 
     finalized_dataframe = pd.concat(frames)
 
@@ -44,13 +38,11 @@ def calculateMatch(PUID):
     finalized_dataframe.insert(0, 'PUID', puid_column)
     finalized_dataframe.insert(0, 'Name', name_column)
 
-
     total_data = []
 
     df_input = finalized_dataframe
 
     names = df_input.iloc[: , 0:2] # Get a dataframe of all the names
-
 
     person_info = df_input.iloc[: , 0:6]  # Get a dataframe of person information
 
@@ -66,10 +58,10 @@ def calculateMatch(PUID):
 
     studentIdNumber = int(PUID) #Replace with user input
 
-
     student_response = response_data[response_data['PUID'] == str(studentIdNumber)]
     student_preference = preference_data[preference_data['PUID'] == str(studentIdNumber)]
 
+    #return preference_data[preference_data['PUID']]
     gender_preference = int(student_preference['interested_gender'])
 
     # print(student_response) #Use to iterate through student responses
@@ -115,7 +107,7 @@ def calculateMatch(PUID):
 
 
 
-    person_scores = sorted(person_scores, key = lambda x: x[2], reverse=False)
+    person_scores = sorted(person_scores, key = lambda x: x[2], reverse=True)
 
     for index in range(0, len(person_scores)):
 
@@ -237,5 +229,3 @@ def calculateMatch(PUID):
 
                 final_results.append(intermediate)
     return final_results
-
-print(calculateMatch(1234567))
