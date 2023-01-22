@@ -27,19 +27,19 @@ def formPost():
                 padding: 0;
                 margin: 0;
                 text-align: center;
-                background-color: gray;
+                background-color: #d171b1;
             }
             .top {
-                background-color: white;
+            
             }
             .match {
-                background-color: #d5f4e6;
+                background-color: white;
             }
             h1 {
-                color: blue;
+                color: white;
             }
             h2 {
-                color: red;
+                color: #802060;
             }
         </style>
     </head>
