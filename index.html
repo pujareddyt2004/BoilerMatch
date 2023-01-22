@@ -547,47 +547,55 @@
             let cry = document.getElementById('cry').value?.substr(0, 1);
             let tattoo = document.getElementById('tattoo').value?.substr(0, 1);
             let interested_gender = document.getElementById('interested-gender').value?.substr(0, 1);
-            // save form data to firebase
-            await db.doc(puid).set({
-                name: name,
-                puid: puid,
-                number: number,
-                year: year,
-                major: major,
-                gender: gender,
-                sports: sports,
-                morning_or_night: morning_or_night,
-                clean: clean,
-                pet: pet,
-                free_time: free_time,
-                corec: corec,
-                nature: nature,
-                shout_or_whisper: shout_or_whisper,
-                sociable: sociable,
-                famous: famous,
-                music: music,
-                spotify_or_apple: spotify_or_apple,
-                work_ethic: work_ethic,
-                money_happiness: money_happiness,
-                rich: rich,
-                first_date_money: first_date_money,
-                pda: pda,
-                dining_court: dining_court,
-                bestfriend: bestfriend,
-                supernatural: supernatural,
-                time_machine: time_machine,
-                drink: drink,
-                aliens: aliens,
-                astrology: astrology,
-                birds: birds,
-                season: season,
-                bell_tower: bell_tower,
-                humans_extinct: humans_extinct,
-                cry: cry,
-                tattoo: tattoo,
-                interested_gender: interested_gender,
-            });
-            alert("Good Job!");
+
+            if (!name || !puid || !number || !year || !major || !gender || !morning_or_night || !clean || !pet || !free_time ||
+            !corec || !nature || !shout_or_whisper || !sociable || !famous || !music || !shout_or_whisper || !work_ethic || !money_happiness || !rich ||
+            !first_date_money || !pda || !dining_court || !bestfriend || !supernatural || !time_machine || !drink || !aliens || !astrology || !birds || !bell_tower ||
+            !humans_extinct || !cry || !bell_tower || !tattoo || !interested_gender) {
+                alert("PLEASE FILL ALL OF THE FIELDS OUT");
+            } else {
+                // save form data to firebase
+                await db.doc(puid).set({
+                    name: name,
+                    puid: puid,
+                    number: number,
+                    year: year,
+                    major: major,
+                    gender: gender,
+                    sports: sports,
+                    morning_or_night: morning_or_night,
+                    clean: clean,
+                    pet: pet,
+                    free_time: free_time,
+                    corec: corec,
+                    nature: nature,
+                    shout_or_whisper: shout_or_whisper,
+                    sociable: sociable,
+                    famous: famous,
+                    music: music,
+                    spotify_or_apple: spotify_or_apple,
+                    work_ethic: work_ethic,
+                    money_happiness: money_happiness,
+                    rich: rich,
+                    first_date_money: first_date_money,
+                    pda: pda,
+                    dining_court: dining_court,
+                    bestfriend: bestfriend,
+                    supernatural: supernatural,
+                    time_machine: time_machine,
+                    drink: drink,
+                    aliens: aliens,
+                    astrology: astrology,
+                    birds: birds,
+                    season: season,
+                    bell_tower: bell_tower,
+                    humans_extinct: humans_extinct,
+                    cry: cry,
+                    tattoo: tattoo,
+                    interested_gender: interested_gender,
+                });
+                alert("Good Job!");
+            }
         })
     </script>
 
