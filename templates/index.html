@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>💋BoilerMatch💏</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="static/main.css" rel="stylesheet" media="all">
+
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: inline;
+        }
+        a:link {
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 125%;
+            padding-left: 50px;
+        }
+        a:visited {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 125%;
+        }
+        a:hover {
+            color: white;
+            text-decoration: none;
+            font-size: 160%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <ul>
+            <li><a href="#"></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="findMatch.html">Find Match</a></li>
+        </ul>
+        <br>
+        <br>
+
+        <div class="wrapper wrapper--w680">
+
+            <div><br><br></div>
+
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">❤️ Boiler⬆️ Match⬆️ ❤️</h2>
+                    <form id="matchForm">
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label"><b>Full Name</b></label>
+                                    <input class="input--style-4" type="text" name="name" id="name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label"><b>PUID (Used to get your results)</b></label>
+                                    <input class="input--style-4" type="text" name="puid" id="puid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label"><b>Phone Number</b></label>
+                                    <input class="input--style-4" type="text" name="number" id="number">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>What Year</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="year" id="year">
+                                    <option disabled="disabled" selected="selected">Choose Year</option>
+                                    <option>0. Freshman</option>
+                                    <option>1. Sophomore</option>
+                                    <option>2. Junior</option>
+                                    <option>3. Senior</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label"><b>Major</b></label>
+                                    <input class="input--style-4" type="text" name="major" id="major">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Gender</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="gender" id="gender">
+                                    <option disabled="disabled" selected="selected">Choose Gender</option>
+                                    <option>0. Male</option>
+                                    <option>1. Female</option>
+                                    <option>2. Non-Binary</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Do You Like Playing Sports</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="sports"  id="sports">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Nope</option>
+                                    <option>1. Rarely</option>
+                                    <option>2. If I think it's fun</option>
+                                    <option>3. Mostly</option>
+                                    <option>4. Hell Yeah</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Are You...</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="morning-or-night" id="morning-or-night">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. An early-bird</option>
+                                    <option>1. A night-owl</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>How Clean Are You</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="clean" id="clean">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Literal Warzone</option>
+                                    <option>1. Untidy</option>
+                                    <option>2. I mean its livable</option>
+                                    <option>3. Neat-Freak!</option>
+                                    <option>4. Absolutely Spotless</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Pick a Pet</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="pet" id="pet">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Dog</option>
+                                    <option>1. Cat</option>
+                                    <option>2. Either</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>How you would rather be spending your free-time</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="free-time" id="free-time">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Reading a book while listening to some tunes</option>
+                                    <option>1. Binging the latest TV Show or Movie</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>How often do you workout or go to the CoRec?</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="corec" id="corec">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. What's a gym?</option>
+                                    <option>1. I'm too busy to go regularly, but I promise I'm gonna go more often</option>
+                                    <option>2. Casual Gym Enthusiast</option>
+                                    <option>3. You can catch me going a couple times a week</option>
+                                    <option>4. I have the gains of my forefathers flowing through my veins as I go to the gym everyday</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Do you like spending time sitting outside in nature?</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="nature" id="nature">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Kinda a waste of time ngl</option>
+                                    <option>1. Doesn't really matter to me</option>
+                                    <option>2. I live for the outdoors</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Would you rather only be able to...</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="shout-or-whisper" id="shout-or-whisper">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Shout for the rest of your life</option>
+                                    <option>1. Whisper for the rest of your life</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>How sociable would you say you are?</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="sociable" id="sociable">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. It's just Me, Myself, and I</option>
+                                    <option>1. Only hanging out with my close friends</option>
+                                    <option>2. I like to spend time-meeting new people</option>
+                                    <option>3. #LIFEOFTHEPARTY!!</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Would you rather be...</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="famous" id="famous">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Not famous but have lots of close friends</option>
+                                    <option>1. Super famous but only have a handful of friends</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>How much time do you spend listening to music?</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="music" id="music">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Don't really care about music</option>
+                                    <option>1. I like to listen when there's nothing to do</option>
+                                    <option>2. I spend a good amount of time listening</option>
+                                    <option>3. 24/7 Listening to music</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Spotify or Apple Music?</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="spotify-or-apple" id="spotify-or-apple">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Spotify</option>
+                                    <option>1. Apple Music</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Work Ethic?</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="work-ethic" id="work-ethic">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Mastered the art of procrastination</option>
+                                    <option>1. If it can be done tomorrow, it can be done today #OnTheGrind24/7</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Do you believe money can buy happiness?</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="money-happiness" id="money-happiness">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Yes</option>
+                                    <option>1. No</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Would you rather...</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="rich" id="rich">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Be super smart and super duper rich</option>
+                                    <option>1. Be super attractive and wealthy</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>How would you split the check on the first-date?</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="first-date-money" id="first-date-money">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. 50/50 - Going Dutch</option>
+                                    <option>1. The man pays for the entire meal</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Thoughts on PDA?</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="pda" id="pda">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Hell NO!</option>
+                                    <option>1. Super Embarrassed (Would literally turn redder than a tomato)</option>
+                                    <option>2. It doesn't really matter</option>
+                                    <option>3. Would do it anywhere at anytime</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Favorite Dining Court?</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="dining-court" id="dining-court">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Ford</option>
+                                    <option>1. Earhart</option>
+                                    <option>2. Wiley</option>
+                                    <option>3. Hillenbrand</option>
+                                    <option>4. Windsor</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Would you be ok with your partner having a bestfriend of the opposite gender?</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="bestfriend" id="bestfriend">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Nah</option>
+                                    <option>1. I would need to talk to them first and get their vibe</option>
+                                    <option>2. Sure it doesn't matter to me</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Do you believe in the supernatural? (Ghosts, Demons, etc)</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="supernatural" id="supernatural">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Yes</option>
+                                    <option>1. No</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>You have a time-machine but it can only go...</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="time-machine" id="time-machine">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Back in Time</option>
+                                    <option>1. Forward in Time</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>How much do you drink?</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="drink" id="drink">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. None, I'm a law-abiding Boilermaker</option>
+                                    <option>1. I drink a little bit</option>
+                                    <option>2. Sure I drink on the weekends</option>
+                                    <option>3. I like to drink when I'm able to</option>
+                                    <option>4. Constantly hungover</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Do aliens exist?</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="aliens" id="aliens">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Yes they do, there's no way that we, humans, on this Planet Earth, are the only sentient species in the universe</option>
+                                    <option>1. Nah</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Do you believe in Astrology?</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="astrology" id="astrology">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Yes</option>
+                                    <option>1. No</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Are birds real?</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="birds" id="birds">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Yes</option>
+                                    <option>1. NO THEY'RE NOT, DON'T LISTEN TO THE PROPAGANDA THE GOVERNMENT IS FEEDING YOU</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Favorite Season?</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="season" id="season">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Spring</option>
+                                    <option>1. Summer</option>
+                                    <option>2. Fall</option>
+                                    <option>3. Winter</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Have you walked under the Purdue Bell Tower?</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="bell-tower" id="bell-tower">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Yes</option>
+                                    <option>1. No</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Do you think humanity will ever go extinct?</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="humans-extinct" id="humans-extinct">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Yes</option>
+                                    <option>1. No</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Have you ever cried watching a movie or reading a book?</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="cry" id="cry">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Yes</option>
+                                    <option>1. No</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>Would you ever get a tattoo?</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="tattoo" id="tattoo">
+                                    <option disabled="disabled" selected="selected">Choose Option</option>
+                                    <option>0. Yes</option>
+                                    <option>1. No</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><b>What Gender(s) are you Interested In? (Pick One Option)</b></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="interested-gender" id="interested-gender">
+                                    <option disabled="disabled" selected="selected">Choose Gender</option>
+                                    <option>0. Male</option>
+                                    <option>1. Female</option>
+                                    <option>2. Non-Binary</option>
+                                    <option>3. Male & Female</option>
+                                    <option>4. Male & Non-Binary</option>
+                                    <option>5. Female & Non-Binary</option>
+                                    <option>6. All Genders</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" type="submit" id="submitt">Match Up!</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="js/global.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBU2u8GHqlmDnBLTN2uhXw95qsQpz6KiKA",
+            authDomain: "boilermatch-33826.firebaseapp.com",
+            databaseURL: "https://boilermatch-33826-default-rtdb.firebaseio.com",
+            projectId: "boilermatch-33826",
+            storageBucket: "boilermatch-33826.appspot.com",
+            messagingSenderId: "469018307651",
+            appId: "1:469018307651:web:925533b16b97307aeb78f6"
+        };
+
+        // initialize firebase
+        firebase.initializeApp(firebaseConfig);
+        const firestore = firebase.firestore();
+
+        //variable to acccess database collection
+        const db = firestore.collection("formData");
+
+        const results = document.getElementById("resultForm");
+        let puid = null
+        results.addEventListener('submit', async(e) => {
+            e && e.preventDefault();
+            puid = document.getElementById('puidResult').value;
+        })
+
+        const form = document.getElementById("matchForm");
+        form.addEventListener('submit', async(e) => {
+            e && e.preventDefault();
+
+            // event list
+            let name = await document.getElementById('name').value;
+            let puid = await document.getElementById('puid').value;
+            let number = await document.getElementById('number').value;
+            let year = await document.getElementById('year').value?.substr(0, 1);
+            let major = await document.getElementById('major').value;
+            let gender = await document.getElementById('gender').value?.substr(0, 1);
+            let sports = await document.getElementById('sports').value?.substr(0, 1);
+            let morning_or_night = await document.getElementById('morning-or-night').value?.substr(0, 1);
+            let clean = await document.getElementById('clean').value?.substr(0, 1);
+            let pet = await document.getElementById('pet').value?.substr(0, 1);
+            let free_time = await document.getElementById('free-time').value?.substr(0, 1);
+            let corec = await document.getElementById('corec').value?.substr(0, 1);
+            let nature = await document.getElementById('nature').value?.substr(0, 1);
+            let shout_or_whisper = await document.getElementById('shout-or-whisper').value?.substr(0, 1);
+            let sociable = await document.getElementById('sociable').value?.substr(0, 1);
+            let famous = await document.getElementById('famous').value?.substr(0, 1);
+            let music = await document.getElementById('music').value?.substr(0, 1);
+            let spotify_or_apple = await document.getElementById('spotify-or-apple').value?.substr(0, 1);
+            let work_ethic = await document.getElementById('work-ethic').value?.substr(0, 1);
+            let money_happiness = await document.getElementById('money-happiness').value?.substr(0, 1);
+            let rich = await document.getElementById('rich').value?.substr(0, 1);
+            let first_date_money = await document.getElementById('first-date-money').value?.substr(0, 1);
+            let pda = await document.getElementById('pda').value?.substr(0, 1);
+            let dining_court = await document.getElementById('dining-court').value?.substr(0, 1);
+            let bestfriend = await document.getElementById('bestfriend').value?.substr(0, 1);
+            let supernatural = await document.getElementById('supernatural').value?.substr(0, 1);
+            let time_machine = await document.getElementById('time-machine').value?.substr(0, 1);
+            let drink = await document.getElementById('drink').value?.substr(0, 1);
+            let aliens = await document.getElementById('aliens').value?.substr(0, 1);
+            let astrology = await document.getElementById('astrology').value?.substr(0, 1);
+            let birds = await document.getElementById('birds').value?.substr(0, 1);
+            let season = await document.getElementById('season').value?.substr(0, 1);
+            let bell_tower = await document.getElementById('bell-tower').value?.substr(0, 1);
+            let humans_extinct = await document.getElementById('humans-extinct').value?.substr(0, 1);
+            let cry = await document.getElementById('cry').value?.substr(0, 1);
+            let tattoo = await document.getElementById('tattoo').value?.substr(0, 1);
+            let interested_gender = await document.getElementById('interested-gender').value?.substr(0, 1);
+
+            if (!name || !puid || !number || !year || !major || !gender || !morning_or_night || !clean || !pet || !free_time ||
+            !corec || !nature || !shout_or_whisper || !sociable || !famous || !music || !shout_or_whisper || !work_ethic || !money_happiness || !rich ||
+            !first_date_money || !pda || !dining_court || !bestfriend || !supernatural || !time_machine || !drink || !aliens || !astrology || !birds || !bell_tower ||
+            !humans_extinct || !cry || !bell_tower || !tattoo || !interested_gender) {
+                alert("PLEASE FILL ALL OF THE FIELDS OUT");
+            } else {
+                // save form data to firebase
+                await db.doc(puid).set({
+                    name: name,
+                    puid: puid,
+                    number: number,
+                    year: year,
+                    major: major,
+                    gender: gender,
+                    sports: sports,
+                    morning_or_night: morning_or_night,
+                    clean: clean,
+                    pet: pet,
+                    free_time: free_time,
+                    corec: corec,
+                    nature: nature,
+                    shout_or_whisper: shout_or_whisper,
+                    sociable: sociable,
+                    famous: famous,
+                    music: music,
+                    spotify_or_apple: spotify_or_apple,
+                    work_ethic: work_ethic,
+                    money_happiness: money_happiness,
+                    rich: rich,
+                    first_date_money: first_date_money,
+                    pda: pda,
+                    dining_court: dining_court,
+                    bestfriend: bestfriend,
+                    supernatural: supernatural,
+                    time_machine: time_machine,
+                    drink: drink,
+                    aliens: aliens,
+                    astrology: astrology,
+                    birds: birds,
+                    season: season,
+                    bell_tower: bell_tower,
+                    humans_extinct: humans_extinct,
+                    cry: cry,
+                    tattoo: tattoo,
+                    interested_gender: interested_gender,
+                });
+                alert("Good Job!");
+            }
+        })
+    </script>
+
+</body>
+</html>
