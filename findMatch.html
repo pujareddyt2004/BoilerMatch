@@ -31,7 +31,7 @@
     <py-env>
         - pandas
         - scikit-learn
-        - firebase-admin
+        - firebase_admin
     </py-env>
 </head>
 
@@ -56,7 +56,6 @@ import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 import firebase_admin
 from firebase_admin import credentials, firestore
-import pyscript
 
 cred = credentials.Certificate("pythonCredentials.json")
 firebase_admin.initialize_app(cred)
